@@ -1,0 +1,1 @@
+En esta carpeta van los componentes referentes al layout de la app

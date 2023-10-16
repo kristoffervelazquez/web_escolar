@@ -1,0 +1,1 @@
+En esta carpeta van archivos o componentes que pueden ser reutilizados dentro de la app

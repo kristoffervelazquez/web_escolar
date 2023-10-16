@@ -1,0 +1,1 @@
+En esta carpeta se ponen las funciones que no son dependientes de un componente
