@@ -3,79 +3,70 @@ import "../CSS/styles.css"
 const Layout = () => {
   return (
     <div className="layout">
-            
+  
       <main className="container">
-	<aside className="servers">
-		<div className="servers-collection">
-			<div className="server focusable server-friends unread" role="button" aria-label="Friends unread">
-				<div className="server-icon">
-                    {/* <img  width="50" height="50" src="https://img.icons8.com/ios-glyphs/90/graduation-cap--v1.png" alt="graduation-cap"/> */}
-                </div>
-			</div>                        
-		</div>
-		
-		<div className="servers-collection">
-			<div className="server focusable unread" role="button" aria-label="Discord Developers unread">
-				<div className="server-icon">
-                    
-                </div>
+
+
+		<aside className="servers">
+			
+			<div className="home">
+				<button>
+					home
+				</button>
 			</div>
-		</div>
-		
-		<div className="servers-collection">
-			<div className="server focusable active" role="button" aria-label="My Server" aria-selected="true">
-				<div className="server-icon">
-                   </div>
-			</div>
-		</div>
-	</aside>
+			
+			<div className="subjects">
+
+				<button>1</button>
+				<button>2</button>
+				<button>3</button>
+				<button>4</button>				
+
+			</div>			
 	
+		</aside>
+
 	<aside className="channels">
 		<header className="channels-header focusable">
-        {/* <h3 role="header" className="channels-header-name"> Información de la materia </h3>*/}		   	
+         <h3 role="header" className="channels-header-name"> ITEM LIST </h3>
 		</header>
 				
 		<section className="channels-list">
 			<header className="channels-list-header focusable">
-				{/*<h5>Text Channels</h5>*/}
+				<h5>Item 1</h5>
 			</header>			
 				
 			<header className="channels-list-header focusable">
-                {/*<h5>Voice Channels</h5>*/}				
+                <h5>Item 2</h5>
+			</header>
+
+			<header className="channels-list-header focusable">
+                <h5>Item 3</h5>
+			</header>
+
+			<header className="channels-list-header focusable">
+                <h5>Item 4</h5>
 			</header>
 		</section>	
 	
 	</aside>
 		
 	<div className="vert-container">
-    <aside className="news">
+   
+        <menu type="toolbar" className="menu">
+        <h2 className="menu-name">  </h2>			
+		</menu>		
+	
+	
+        <aside className="news">
 		<header className="channels-header focusable">
          <h3 role="header" className="channels-header-name"> Noticias </h3>
-		</header>
+		</header>					
+		<header className="channels-list-header focusable">
 				
-	
-			<header className="channels-list-header focusable">
-				{/*<h5>Text Channels</h5>*/}
-			</header>
-			
-			<ul className="channels-list-text">
-				
-			</ul>
-			
-			<header className="channels-list-header focusable">
-                {/*<h5>Becas</h5>*/}				
-			</header>
-		
-			
+			</header>														
 	</aside>
 
-        
-        <menu type="toolbar" className="menu">
-            <h2 className="menu-name">general</h2>			
-		</menu>		
-		<section className="chat">		
-		</section>        
-       
 		
 	</div>
 </main>
