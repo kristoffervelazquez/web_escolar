@@ -1,14 +1,11 @@
+import AppLayout from "./layout/AppLayout"
 
-import Layout from './layout/Layout'
 
 const App = () => {
   return (
-    <div>
-      <Layout />
-    </div>
-
-  
-
+    <AppLayout>
+      <h1>App Router</h1>
+    </AppLayout>
   )
 }
 
