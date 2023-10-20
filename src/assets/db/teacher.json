@@ -1,0 +1,16 @@
+{
+    "teachers": [
+        {
+            "teacher_id": "",
+            "name": "",
+            "email": "",
+            "password": "",
+            "subjects": [
+                {
+                    "subject_id": "",
+                    "name": ""
+                }
+            ]
+        }
+    ]
+}

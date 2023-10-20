@@ -1,0 +1,21 @@
+{
+    "students": [
+        {
+            "student_id": "",
+            "name": "",
+            "email": "",
+            "password": "",
+            "major": "",
+            "subjects": [
+                {
+                    "teacher_id": "",
+                    "name": ""
+                }
+            ],
+            "credits": ""
+        }
+        
+
+
+    ]
+} 
