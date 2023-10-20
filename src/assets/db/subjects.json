@@ -1,0 +1,12 @@
+{
+    "subjects": [
+        {
+            "subject_id": "",
+            "name": "",
+            "teacher": {
+                "teacher_id": "",
+                "name": ""
+            }
+        }
+    ]
+}
