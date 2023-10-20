@@ -1,6 +1,11 @@
 import React from 'react'
+import subjectsJson from "./pages/Subjects.json"
+import Subjects from './pages/SubjectSelector';
+
 
 const ServersAside = () => {
+  const subjectInfo = subjectsJson;
+  console.log(subjectInfo);
   return (
     <aside className="servers">
       <div className="home">
@@ -10,14 +15,9 @@ const ServersAside = () => {
       </div>
 
       <div className="subjects">
-
-        <button>Diseño web</button>
-        <button>TAP</button>
-        <button>IA</button>
-        <button>Junior H</button>
-
+      <Subjects subjects={subjectInfo}/>
       </div>
-
+    
     </aside>
   )
 }
