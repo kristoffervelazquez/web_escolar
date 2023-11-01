@@ -1,0 +1,37 @@
+.landing-page {
+  text-align: center;
+  padding: 50px;
+  background-color: #2E3136;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.landing-page h1 {
+  font-size: 2em;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.landing-page p {
+  font-size: 1.2em;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+.login-button {
+  background-color: #007bff; 
+  color: #fff; 
+  padding: 10px 20px;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-button:hover {
+  background-color: #0056b3; 
+}

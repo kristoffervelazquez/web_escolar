@@ -1,4 +1,5 @@
 import { Outlet } from "react-router-dom";
+import LandingPage from "./LandingPage";
 
 
 const HomeRoutes = {
@@ -7,7 +8,7 @@ const HomeRoutes = {
   children: [
     {
       path: "",
-      element: <div><h1>Home</h1></div>,
+      element: <LandingPage />,
     },
   ],
 }

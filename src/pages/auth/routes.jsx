@@ -1,5 +1,6 @@
 import React from "react";
-import { Outlet } from "react-router-dom";
+import { Navigate, Outlet } from "react-router-dom";
+import LoginScreen from "./LoginScreen";
 
 const AuthRoutes = {
   path: "auth",
@@ -7,11 +8,11 @@ const AuthRoutes = {
   children: [
     {
       path: "",
-      element: <div>auth</div>,
+      element: <Navigate to="auth/login" />,
     },
     {
       path: "login",
-      element: <div>login</div>,
+      element: <LoginScreen/>,
     },
   ],
 };
