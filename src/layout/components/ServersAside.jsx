@@ -1,15 +1,20 @@
 import React from 'react'
-import subjectsJson from "./pages/Subjects.json"
-import Subjects from './pages/SubjectSelector';
+import subjectsJson from "../../assets/db/subjects.json"
+import Subjects from './SubjectSelector';
+import { useNavigate } from 'react-router-dom';
 
 
 const ServersAside = () => {
   const subjectInfo = subjectsJson;
-  console.log(subjectInfo);
+  const navigate = useNavigate();
+
+  const handleClickHome = () => {
+    navigate(`/app`);
+  }
   return (
     <aside className="servers">
       <div className="home">
-        <button>
+        <button onClick={handleClickHome}>
           Inicio
         </button>
       </div>

@@ -1,11 +1,10 @@
-import AppLayout from "./layout/AppLayout"
+import { RouterProvider } from "react-router-dom"
+import { router } from "./router/router"
 
 
 const App = () => {
   return (
-    <AppLayout>
-      <h1>App Router</h1>
-    </AppLayout>
+    <RouterProvider router={router} />
   )
 }
 

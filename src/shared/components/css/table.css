@@ -1,0 +1,31 @@
+.tareas-container {
+  width: 100%;
+  overflow: auto;
+}
+
+.tareas-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 2px solid #333;
+}
+
+.tareas-table th {
+  background-color: #333;
+  color: #fff;
+  text-align: left;
+  padding: 10px;
+}
+
+.tareas-table th,
+.tareas-table td {
+  border: 1px solid #333;
+  padding: 10px;
+}
+
+.tareas-table tr:nth-child(even) {
+  background-color: #575757;
+}
+
+.tareas-table tr:hover {
+  background-color: #ccc;
+}

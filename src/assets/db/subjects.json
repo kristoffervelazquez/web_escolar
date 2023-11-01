@@ -1,12 +1,22 @@
-{
-    "subjects": [
-        {
-            "subject_id": "",
-            "name": "",
-            "teacher": {
-                "teacher_id": "",
-                "name": ""
-            }
-        }
-    ]
-}
+[
+  {
+    "id": 1,
+    "imagePath": "images/math.jpg",
+    "subjectName": "Inteligencia artificial"
+  },
+  {
+    "id": 2,
+    "imagePath": "images/science.jpg",
+    "subjectName": "Viejo Viejo"
+  },
+  {
+    "id": 3,
+    "imagePath": "images/history.jpg",
+    "subjectName": "Auditoria"
+  },
+  {
+    "id": 4,
+    "imagePath": "images/english.jpg",
+    "subjectName": "Diseño Web"
+  }
+]
