@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
 import AppLayout from "../../layout/AppLayout";
 import SubjectScreen from "./SubjectScreen";
-import ShowSequence from "./SequenceScreen";
+import SequenceScreen from "./SequenceScreen";
 
 
 const AppRoutes = {
@@ -18,7 +18,7 @@ const AppRoutes = {
     },
     {
       path: "subject/:id/sequence",
-      element: <ShowSequence />
+      element: <SequenceScreen />
     },
     {
       path: "subject/:id/mail",
