@@ -10,7 +10,6 @@ function Table({ rows, columns }) {
             {columns.map((column, index) => (
               <th key={index}>{column}</th>
             ))}
-              <th>Accion</th>
 
           </tr>
         </thead>
