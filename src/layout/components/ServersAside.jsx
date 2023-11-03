@@ -2,6 +2,7 @@ import React from 'react'
 import subjectsJson from "../../assets/db/subjects.json"
 import Subjects from './SubjectSelector';
 import { useNavigate } from 'react-router-dom';
+import"../../CSS/ServersAside.css"
 
 
 const ServersAside = () => {

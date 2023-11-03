@@ -10,14 +10,17 @@ function Table({ rows, columns }) {
             {columns.map((column, index) => (
               <th key={index}>{column}</th>
             ))}
+              <th>Accion</th>
+
           </tr>
         </thead>
         <tbody>
           {rows.map((row, rowIndex) => (
             <tr key={rowIndex}>
-              {row.map((cell, cellIndex) => (
-                <td key={cellIndex}>{cell}</td>
+              {columns.map((column, cellIndex) => (
+                <td key={cellIndex}>{row[column]}</td>
               ))}
+              <td><button className='blue-btn'>Responder</button></td>
             </tr>
           ))}
         </tbody>
