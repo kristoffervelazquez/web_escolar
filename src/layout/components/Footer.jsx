@@ -1,5 +1,6 @@
 import React from "react";
 import AppLayout from "../AppLayout";
+import "../../CSS/Footer.css"
 
 const Footer = () => {
     return (
