@@ -8,6 +8,7 @@ class Assignment {
         this.subject_id = subject_id;
         this.title = title;
         this.description = description;
+        this.date = new Date();
         this.grade = grade;
     }
 
