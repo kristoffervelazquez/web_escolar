@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import subjectsJson from "../../assets/db/subjects.json"
+import "../../CSS/ChannelsList.css"
 
 const ChannelsList = () => {
   const params = useParams();

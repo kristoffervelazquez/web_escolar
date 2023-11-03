@@ -1,0 +1,29 @@
+.container {
+    height: 100%;
+    display: flex;
+  }
+  
+  .vert-container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+  }
+
+  .menu {
+    flex: 0 0 57px;
+    padding: 0 20px 0 20px;
+    background: #36393e;
+    border-bottom: 1px solid #2d3137;
+    /* width: 82.2%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .menu-name {
+    font-size: 1.3rem;
+    letter-spacing: 0.05rem;
+  }
+  
+  
+  
