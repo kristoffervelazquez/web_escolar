@@ -32,7 +32,7 @@ function LoginScreen() {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
               />
-              <button onClick={handleLogin} className="opacity">
+              <button onClick={handleLogin} className="opacity button">
                 Iniciar Sesión
               </button>
             </form>

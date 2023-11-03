@@ -1,25 +1,36 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Table from '../../shared/components/Table';
 
+const localAssignments = JSON.parse(localStorage.getItem('Assigments')).map((assignment) => {
+  return {
+    ID: assignment.assignment_id,
+    subject_id: assignment.subject_id,
+    titulo: assignment.title,
+    Descripcion: assignment.description,
+    Fecha:  new Date(assignment.date).toDateString(),
+    Calificacion: assignment.grade,
+    Accion: <button>Responder</button>
+  }
+}) || [];
+
 const SubjectScreen = () => {
+  useEffect(() => {
+    document.title = 'Tareas'
+    if (!localAssignments) return;
+  }, [])
+
+
+
+  
+
   return (
     <>
-      <Table rows={rows} columns={columns} />
+      <Table rows={localAssignments} columns={columns} />
     </>
   )
 }
 
 export default SubjectScreen
+const rows = [{"assignment_id":1698982385812,"subject_id":"Actividad 1","title":1,"description":"Sobarme los huevos","date":"2023-11-03T03:33:05.812Z","grade":"0/10"}]
 
-
-const rows = [
-  ['Tarea 1', 'Descripción de la tarea 1', 'Fecha 1', <button>Responder</button>],
-  ['Tarea 2', 'Descripción de la tarea 2', 'Fecha 2', <button>Responder</button>],
-  ['Tarea 3', 'Descripción de la tarea 3', 'Fecha 3', <button>Responder</button>],
-  ['Tarea 4', 'Descripción de la tarea 4', 'Fecha 4', <button>Responder</button>],
-  ['Tarea 5', 'Descripción de la tarea 5', 'Fecha 5', <button>Responder</button>],
-  ['Tarea 6', 'Descripción de la tarea 6', 'Fecha 6', <button>Responder</button>],
-  // Puedes agregar más filas según sea necesario
-];
-
-const columns = ['Título', 'Descripción', 'Fecha', 'Accion'];
+const columns = ['ID', 'Descripcion', 'Fecha', 'Calificacion'];
