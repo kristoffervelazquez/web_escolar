@@ -35,4 +35,4 @@ const SubjectScreen = () => {
 export default SubjectScreen
 const rows = [{ "assignment_id": 1698982385812, "subject_id": "Actividad 1", "title": 1, "description": "Sobarme los huevos", "date": "2023-11-03T03:33:05.812Z", "grade": "0/10" }]
 
-const columns = ['ID', 'Descripcion', 'Fecha', 'Calificacion'];
+const columns = ['ID', 'Descripcion', 'Fecha Entrega', 'Calificacion', 'Subir'];

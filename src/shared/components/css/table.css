@@ -6,20 +6,20 @@
 .tareas-table {
   width: 100%;
   border-collapse: collapse;
-  border: 2px solid #333;
+  border: 2px solid #7e7d7d;
 }
 
 .tareas-table th {
-  background-color: #333;
+  background-color: #7289da;
   color: #fff;
-  text-align: left;
-  padding: 10px;
+  text-align: center;
+  padding: 7px;
 }
 
 .tareas-table th,
 .tareas-table td {
-  border: 1px solid #333;
-  padding: 10px;
+  border: 2px solid #505050;
+  padding: 7px;
 }
 
 .tareas-table tr:nth-child(even) {
