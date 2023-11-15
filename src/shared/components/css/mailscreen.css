@@ -1,24 +1,27 @@
 @import url('https://cdn-uicons.flaticon.com/2.0.0/uicons-bold-rounded/css/uicons-bold-rounded.css');
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,500,700");
 
-/*#7289da*/
-* {
+
+/* * {
    font-family: "Roboto";
    display: flex;
    font-size: 16px;
-}
+} */
 
-body{
-background-color: #121416;
+body {
+    background-color: #121416;
+    font-family: "Roboto";
+    font-size: 16px;
 }
 
 .mail-container {
+    display:  flex;
     flex-flow: column;
     margin: 2px;
-    padding: 5px;    
+    padding: 5px;
 }
 
- .input-info {    
+.input-info {
     margin-bottom: 5px;
     border: 1px solid #707070;
     background-color: #252525;
@@ -28,15 +31,15 @@ background-color: #121416;
 }
 
 .input-info:hover {
-    background-color: #535353; 
+    background-color: #535353;
 }
 
 .text-icons {
     margin-top: 5px;
     background-color: #252525;
-    color: #949494;   
-    padding: 10px;        
-    border-bottom: 1px solid #707070 ;
+    color: #949494;
+    padding: 10px;
+    border-bottom: 1px solid #707070;
     margin-bottom: 0%;
     transition: all 0.2s ease-in;
 }
@@ -52,14 +55,15 @@ background-color: #121416;
     border-radius: 80%;
     transition: all 0.2s ease-in;
 }
+
 .message {
     margin-top: 0%;
-    justify-content: center;        
-    background-color: #252525;    
+    justify-content: center;
+    background-color: #252525;
     color: white;
     border: none;
     transition: all 0.2s ease-in;
-} 
+}
 
 .message:hover {
     background-color: #535353;
@@ -68,13 +72,13 @@ background-color: #121416;
 .send {
     background-color: #7289da;
     color: white;
-    border-radius: 50px;        
+    border-radius: 50px;
     border: #7289da;
     transition: all 0.5s ease-in-out;
 }
 
 .send:hover {
-    background: #323d62 ;
+    background: #323d62;
     color: rgb(217, 217, 217);
     cursor: pointer;
 }
@@ -82,24 +86,25 @@ background-color: #121416;
 .cancel {
     background-color: #4a4a4a;
     color: white;
-    border-radius: 50px;        
+    border-radius: 50px;
     border: #4a4a4a;
     transition: all 0.5s ease-in-out;
 }
 
 .cancel:hover {
-    background-color:#252525;    
+    background-color: #252525;
     cursor: pointer;
 }
 
 .mail-container button {
-    margin-right: 8px;    
+    margin-right: 8px;
     width: 90px;
-    display: flex;    
+    display: flex;
     align-items: center;
     flex-direction: row;
-    justify-content:center;
+    justify-content: center;
 }
+
 table {
     margin-left: auto;
 }

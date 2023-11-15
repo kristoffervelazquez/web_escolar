@@ -35,8 +35,8 @@ function LandingPage() {
         <p>UES ESCOLAR</p>
       </div>
 
-      <div class="carrusel">
-        <div class="grande">
+      <div className="carrusel">
+        <div className="grande">
           <img src="https://www.ues.mx/archivos/banners/0202311071532002.jpg?13/11/2023%2004:35:29%20a.%20m." alt="imagen 1" className="img" />
           <img src="https://www.ues.mx/archivos/banners/0202311081437892.jpeg?13/11/2023%2004:35:29%20a.%20m." alt="imagen 2" className="img" />
           <img src="https://www.ues.mx/archivos/banners/0202311061143994.jpg?13/11/2023%2004:35:29%20a.%20m." alt="imagen 3" className="img" />
@@ -44,12 +44,12 @@ function LandingPage() {
           <img src="https://www.ues.mx/archivos/banners/0202310271417297.jpg?13/11/2023%2005:05:07%20a.%20m." alt="imagen 5" className="img" />
         </div>
 
-        <ul class="puntos">
-          <p class="punto"></p>
-          <p class="punto"></p>
-          <p class="punto activo"></p>
-          <p class="punto"></p>
-          <p class="punto"></p>
+        <ul className="puntos">
+          <p className="punto"></p>
+          <p className="punto"></p>
+          <p className="punto activo"></p>
+          <p className="punto"></p>
+          <p className="punto"></p>
         </ul>
       </div>
     </div>
