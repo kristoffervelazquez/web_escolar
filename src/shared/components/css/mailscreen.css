@@ -105,6 +105,13 @@ body {
     justify-content: center;
 }
 
+.btn-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
 table {
     margin-left: auto;
 }
