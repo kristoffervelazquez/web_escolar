@@ -1,37 +1,92 @@
+.page {
+  background-image: url("https://i.ibb.co/8rzvnH5/FondoFig.png");
+  background-size: 90%;
+  background-repeat: no-repeat;
+}
+
 .landing-page {
   text-align: center;
   padding: 50px;
-  background-color: #2E3136;
-  min-height: 100vh;
+  min-height: 85vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
 }
 
 .landing-page h1 {
-  font-size: 2em;
-  color: #fff;
+  font-size: 5em;
+  color: #ece8e8c4;
   margin-bottom: 20px;
 }
 
 .landing-page p {
-  font-size: 1.2em;
+  font-size: 2em;
   color: #fff;
-  margin-bottom: 30px;
+  margin-bottom: 70px;
+  margin-top: -20px;
 }
 
 .login-button {
-  background-color: #007bff; 
-  color: #fff; 
+  background-color: #09417e;
+  color: #fff;
   padding: 10px 20px;
   font-size: 1.2em;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
+  margin-left: 87%;
+  margin-top: 20px;
 }
 
 .login-button:hover {
-  background-color: #0056b3; 
+  background-color: #0056b3;
+}
+
+.carrusel {
+  width: 100%;
+  max-width: 120em;
+  padding: 5em;
+  overflow: hidden;
+  
+}
+
+.carrusel .grande {
+  width: 500%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2em;
+  transition: all .5s ease;
+  transform: translateX(-40%);
+  background-color: #0f3460;
+}
+
+.carrusel .img {
+  width: calc(100% / 5 - 2em);
+  min-height: 10vh;
+}
+
+.carrusel .puntos {
+  width: 100%;
+  margin: 1em 0 0;
+  padding: .4em;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.carrusel .punto {
+  width: 1em;
+  height: 1em;
+  margin: .5em .5em 0;
+  background-color: #0f3460;
+}
+
+.carrusel .punto.activo{
+  background-color: rgba(245, 163, 11, 0.842)
 }
