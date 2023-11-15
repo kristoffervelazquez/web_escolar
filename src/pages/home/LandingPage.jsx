@@ -24,7 +24,7 @@ punto.forEach((cadaPunto, i) => {
 
 function LandingPage() {
   return (
-    <div className="page" onload="myFunction()">
+    <div className="page">
 
       <Link to="auth/login">
         <button className="login-button">Iniciar Sesión</button>
