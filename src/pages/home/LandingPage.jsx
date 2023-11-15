@@ -1,28 +1,32 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom'; // Asumiendo que estás utilizando React Router para la navegación
 import './css/landing.css';
 
-const grande = document.querySelector('.grande')
-const punto = document.querySelectorAll('.punto')
 
-punto.forEach((cadaPunto, i) => {
-
-  punto[i].addEventListener('click', () => {
-
-    let operacion = i * -20
-
-    grande.style.transform = `translateX(${operacion}%)`
-
-    punto.forEach((cadaPunto, i) => {
-      punto[i].classList.remove('activo')
-    })
-
-    punto[i].classList.add('activo')
-
-  })
-})
 
 function LandingPage() {
+
+  useEffect(() => {
+    document.title = 'UES Escolar - Inicio';
+    const grande = document.querySelector('.grande')
+    const punto = document.querySelectorAll('.punto')
+
+    punto.forEach((cadaPunto, i) => {
+      punto[i].addEventListener('click', () => {
+
+        let operacion = i * -20
+
+        grande.style.transform = `translateX(${operacion}%)`
+
+        punto.forEach((cadaPunto, i) => {
+          punto[i].classList.remove('activo')
+        })
+
+        punto[i].classList.add('activo')
+
+      })
+    })
+  }, []);
   return (
     <div className="page">
 
