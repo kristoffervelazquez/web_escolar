@@ -2,16 +2,21 @@ import { v4 as uuid } from 'uuid';
 import fs from 'fs';
 import path from 'path';
 
-class Assignment {
 
-    constructor({ subject_id, title, description, grade }) {
+const privateData = new WeakMap();
+
+class Assignment {
+    #answered;
+    #grade;
+    constructor({ subject_id, title, description }) {
         this.assignment_id = uuid();
         this.subject_id = subject_id;
         this.title = title;
         this.description = description;
         this.date = new Date();
-        this.grade = grade;
         this.file = null;
+        this.#grade = 0;
+        this.#answered = false;
     }
 
     publish = () => {
@@ -19,7 +24,16 @@ class Assignment {
         const existingData = JSON.parse(localStorage.getItem('Assigments')) || [];
 
         // Add the new data to the existing data
-        existingData.push(this);
+        existingData.push({
+            assignment_id: this.assignment_id,
+            subject_id: this.subject_id,
+            title: this.title,
+            description: this.description,
+            grade: this.#grade,
+            answered: this.#answered,
+            date: this.date,
+            file: this.file
+        });
 
         // Store the updated data back in localStorage
         localStorage.setItem('Assigments', JSON.stringify(existingData));
@@ -48,7 +62,7 @@ class Assignment {
         return filteredData;
     }
 
-    static getAssignment(id) {
+    static getAssignmentById(id) {
         // Retrieve existing data from localStorage, or initialize an empty array if it's the first time
         const existingData = JSON.parse(localStorage.getItem('Assigments'))
 
@@ -91,6 +105,7 @@ class Assignment {
 
         // update assignment file
         filteredData[0].file = file;
+        filteredData[0].answered = true;
 
         // update localStorage with new data
         localStorage.setItem('Assigments', JSON.stringify(existingData));
@@ -98,7 +113,7 @@ class Assignment {
 
     static setDummyData() {
         for (let i = 1; i <= 4; i++) {
-            const assignment = new Assignment({ assignment_id: uuid(), subject_id: i, title: `Assignment ${i}`, description: `Description ${i}`, grade: i });
+            const assignment = new Assignment({ assignment_id: uuid(), subject_id: i, title: `Assignment ${i}`, description: `Description ${i}`, grade: 0 });
             assignment.publish();
         }
     }
