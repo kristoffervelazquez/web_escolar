@@ -1,10 +1,11 @@
+import { v4 as uuid } from 'uuid';
 import fs from 'fs';
 import path from 'path';
 
 class Assignment {
 
-    constructor({ assignment_id, subject_id, title, description, grade }) {
-        this.assignment_id = assignment_id;
+    constructor({ subject_id, title, description, grade }) {
+        this.assignment_id = uuid();
         this.subject_id = subject_id;
         this.title = title;
         this.description = description;
@@ -55,7 +56,7 @@ class Assignment {
         const filteredData = existingData.filter((data) => data.assignment_id === id);
 
         // Return the filtered data
-        return filteredData;
+        return filteredData[0];
     }
 
     static updateAssignment(id, title, description, grade) {
@@ -79,7 +80,7 @@ class Assignment {
         // Store the updated data back in localStorage
         localStorage.setItem('Assigments', JSON.stringify(existingData));
     }
-    
+
     static uploadAssignmentFile(file, assignment_id) {
         // update file from assignment with assignment_id
         // Retrieve existing data from localStorage by assignment_id (number 1-6), or initialize an empty array if it's the first time
@@ -97,12 +98,12 @@ class Assignment {
 
     static setDummyData() {
         for (let i = 1; i <= 4; i++) {
-            const assignment = new Assignment({ assignment_id: Date.now(), subject_id: i, title: `Assignment ${i}`, description: `Description ${i}`, grade: i });
+            const assignment = new Assignment({ assignment_id: uuid(), subject_id: i, title: `Assignment ${i}`, description: `Description ${i}`, grade: i });
             assignment.publish();
         }
     }
 
-      // insertIntoDatabase() {
+    // insertIntoDatabase() {
     //     const moduleDir = path.dirname(new URL(import.meta.url).pathname);
     //     const filePath = path.join(moduleDir, '../assets/db/assignments.json');
 
