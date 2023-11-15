@@ -11,7 +11,6 @@ const SubjectScreen = () => {
 
   const getAssignments = async () => {
     const localAssignments = await Assignment.getAssignmentsBySubject(id)
-    console.log(localAssignments)
     const subjectAssignments = localAssignments.filter(a => a.subject_id == id).map((assignment) => {
       return {
         ID: assignment.assignment_id,
@@ -20,6 +19,7 @@ const SubjectScreen = () => {
         Descripcion: assignment.description,
         Fecha: new Date(assignment.date).toDateString(),
         Calificacion: assignment.grade,
+        answered: assignment.answered,
         // Subir: <button>Responder</button>
       }
     })
