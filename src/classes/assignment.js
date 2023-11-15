@@ -2,9 +2,6 @@ import { v4 as uuid } from 'uuid';
 import fs from 'fs';
 import path from 'path';
 
-
-const privateData = new WeakMap();
-
 class Assignment {
     #answered;
     #grade;
