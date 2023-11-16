@@ -27,8 +27,6 @@ const SubjectScreen = () => {
     setAssignments(subjectAssignments)
   }
 
-  let localUserInfo = localStorage.getItem('user');
-  let storedUser = JSON.parse(localUserInfo);
 
 
   useEffect(() => {
@@ -41,11 +39,6 @@ const SubjectScreen = () => {
     <>
       <Table rows={assignments} columns={columns} />
       <button className='button-add' onClick={Assignment.setDummyData}>Llenar bdd</button>
-      {storedUser.type === "Teacher"?(
-        
-      <button className='button-edit'>Editar</button>
-        ):null}
-      
     </>
   )
 }
