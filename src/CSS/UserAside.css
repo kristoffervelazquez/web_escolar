@@ -1,0 +1,42 @@
+.news {
+  background: #2e3136;
+  /* position: fixed;
+    right: 0%;
+    bottom: 0%; */
+  display: flex;
+  flex-direction: column;
+  /* height: 100%; */
+  /* width: 240px; */
+  flex: 0 0 240px;
+
+
+}
+
+.news-img-container {
+  display: flex;
+  height: max-content;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.news-img {
+  margin-bottom: 10px;
+}
+
+.avatar {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.teacher-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px;
+
+}

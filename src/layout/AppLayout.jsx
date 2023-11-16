@@ -1,7 +1,7 @@
 import "../CSS/styles.css";
 import ChannelsList from "./components/ChannelsList";
 import MiddleContainer from "./components/MiddleContainer";
-import NewsAside from "./components/NewsAside";
+import UserAside from "./components/UserAside";
 import ServersAside from "./components/ServersAside";
 import Footer from "./components/Footer";
 
@@ -12,7 +12,7 @@ const AppLayout = ({ children }) => {
 				<ServersAside />
 				<ChannelsList />
 				<MiddleContainer>{children}</MiddleContainer>
-				<NewsAside />
+				<UserAside />
 			</main>
 			<Footer />
 		</div>
