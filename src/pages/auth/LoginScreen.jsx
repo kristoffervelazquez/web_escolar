@@ -24,7 +24,7 @@ function LoginScreen() {
     expedient: ['PROF123', 'PROF456', 'PROF789', 'PROF101112'],
     type: ['Teacher', 'Teacher', 'Teacher', 'Teacher'],
     subjects: [1, 2, 3, 4],
-    img: ['https://i.ibb.co/vmmYzh9/imagen-2023-11-16-041252855.png', 'https://scontent.fhmo6-1.fna.fbcdn.net/v/t1.6435-9/67293806_331358077818046_7274083588918738944_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=dd63ad&_nc_ohc=yl4EKjZhLjQAX8zKoKb&_nc_ht=scontent.fhmo6-1.fna&oh=00_AfB13FE_YN-61vF1x7hEapkudURxwAEUwTd-mWZpVhNxDw&oe=657D8FF7', 'https://i.ibb.co/5s0W8vH/imagen-2023-11-16-041224390.png', 'https://i.ibb.co/HznydVS/imagen-2023-11-16-041135212.png']
+    img: ['https://i.ibb.co/vmmYzh9/imagen-2023-11-16-041252855.png', 'https://scontent.fhmo6-1.fna.fbcdn.net/v/t1.6435-9/67293806_331358077818046_7274083588918738944_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=dd63ad&_nc_ohc=yl4EKjZhLjQAX8zKoKb&_nc_ht=scontent.fhmo6-1.fna&oh=00_AfB13FE_YN-61vF1x7hEapkudURxwAEUwTd-mWZpVhNxDw&oe=657D8FF7', 'https://i.ibb.co/5s0W8vH/imagen-2023-11-16-041224390.png', 'https://i.ibb.co/Jkg3qdd/imagen-2023-11-16-115622485.png']
 };
 
 
