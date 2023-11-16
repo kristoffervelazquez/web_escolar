@@ -7,50 +7,24 @@ const UserAside = () => {
   const subjects = subjectsJson;
   const { id } = useParams();
 
-  const user = {
-    name: 'Estudiante',
-    lastName: 'Ejemplo',
-    expedient: '123456',
-    gpa: '9.5',
-    type: 'student',
-    subjects: [1, 2, 3, 4],
-    img: 'https://i.ibb.co/4pFCM21/twisted.gif'
-  }
 
-  const teacher = {
-    name: 'Docente',
-    lastName: 'Ejemplo',
-    expedient: 'PROFUES123',
-    type: 'teacher',
-    subjects: [1],
-    img: 'https://yt3.googleusercontent.com/ytc/APkrFKZ2QoVMy2NZdK5ZAvOtQnLY8sjICPxCNSWhjPST=s900-c-k-c0x00ffffff-no-rj'
-  }
-
+  let localUserInfo = localStorage.getItem('user');
+  let storedUser = JSON.parse(localUserInfo);
+  
   useEffect(() => {
   }, [id])
   return (
     <aside className="news">
       <header className="channels-header focusable">
-        <h3 role="header" className="channels-header-name">{id ? 'Docente' : 'Alumno'}</h3>
-      </header>
-      {
-        id ?
+        <h3 role="header" className="channels-header-name">{storedUser.type}</h3>
+      </header>{
+
           <section className='news-img-container'>
-            <img className='avatar' src={teacher.img} alt="123" />
+            <img className='avatar' src={storedUser.img} alt="123" />
             <div className='teacher-info'>
-              <h3>{teacher.name} {teacher.lastName}</h3>
-              <p>{teacher.expedient}</p>
-              <p>{teacher.expedient}@ues.mx</p>
-            </div>
-          </section>
-          :
-          <section className='news-img-container'>
-            <img className='avatar' src={user.img} alt="123" />
-            <div className='teacher-info'>
-              <h3>{user.name} {user.lastName}</h3>
-              <p>{user.expedient}</p>
-              <p>{user.expedient}@ues.mx</p>
-              <p>Promedio: {user.gpa}</p>
+              <h3>{storedUser.name} {storedUser.lastName}</h3>
+              <p>{storedUser.type}</p>
+              <p>{storedUser.expedient}@ues.mx</p>
             </div>
           </section>
       }

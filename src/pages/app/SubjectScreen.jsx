@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import Table from '../../shared/components/Table';
 import { useParams } from 'react-router-dom';
 import Assignment from '../../classes/assignment';
+import '../../CSS/SubjectButtons.css'
 
 // const localAssignments = JSON.parse(localStorage.getItem('Assigments')) || [];
 
@@ -26,6 +27,8 @@ const SubjectScreen = () => {
     setAssignments(subjectAssignments)
   }
 
+  let localUserInfo = localStorage.getItem('user');
+  let storedUser = JSON.parse(localUserInfo);
 
 
   useEffect(() => {
@@ -37,7 +40,12 @@ const SubjectScreen = () => {
   return (
     <>
       <Table rows={assignments} columns={columns} />
-      <button onClick={Assignment.setDummyData}>Llenar bdd</button>
+      <button className='button-add' onClick={Assignment.setDummyData}>Llenar bdd</button>
+      {storedUser.type === "Teacher"?(
+        
+      <button className='button-edit'>Editar</button>
+        ):null}
+      
     </>
   )
 }

@@ -10,6 +10,7 @@ function ShowMail() {
         message: ''
     });
     
+    
     return (
 
         <form action="" className="mail-container">
