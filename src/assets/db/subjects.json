@@ -2,21 +2,25 @@
   {
     "id": 1,
     "imagePath": "images/math.jpg",
-    "subjectName": "Inteligencia artificial"
+    "subjectName": "Inteligencia artificial",
+    "teacher": "PROFUES01"
   },
   {
     "id": 2,
     "imagePath": "images/science.jpg",
-    "subjectName": "Viejo Viejo"
+    "subjectName": "Viejo Viejo",
+    "teacher": "PROFUES02"
   },
   {
     "id": 3,
     "imagePath": "images/history.jpg",
-    "subjectName": "Auditoria"
+    "subjectName": "Auditoria",
+    "teacher": "PROFUES03"
   },
   {
     "id": 4,
     "imagePath": "images/english.jpg",
-    "subjectName": "Diseño Web"
+    "subjectName": "Diseño Web",
+    "teacher": "PROFUES04"
   }
 ]

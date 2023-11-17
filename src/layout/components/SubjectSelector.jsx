@@ -10,6 +10,9 @@ export default function Subjects(props) {
         // console.log('app/subject/' + item.id)
         navigate(`/app/subject/${item.id}/activities`);
     }
+    
+  let localUserInfo = localStorage.getItem('user');
+  let storedUser = JSON.parse(localUserInfo);
 
     
 
@@ -17,13 +20,21 @@ export default function Subjects(props) {
 
         <div className="subjects">
             {subjects.map((item, index) => (
-
+                storedUser.type === "Teacher" && storedUser.subjects === item.id ? (
                 <div className="subjects" key={index}>
                     {/* <img src={item.imagePath} /> */}
                     <button onClick={() => handleClick(item)}>{item.subjectName}</button>
 
                 </div>
-            ))}
+            ): storedUser.type === "Student" ?(
+                
+                <div className="subjects" key={index}>
+                    {/* <img src={item.imagePath} /> */}
+                    <button onClick={() => handleClick(item)}>{item.subjectName}</button>
+
+                </div>
+
+            ):null))}
         </div>
 
     );

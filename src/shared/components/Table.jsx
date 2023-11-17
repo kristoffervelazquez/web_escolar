@@ -7,6 +7,9 @@ function Table({ rows, columns }) {
     const assignment = await Assignment.getAssignmentById(row.ID);
     console.log(assignment);
   }
+  
+  let localUserInfo = localStorage.getItem('user');
+  let storedUser = JSON.parse(localUserInfo);
   return (
     <div className="tareas-container">
       <table className="tareas-table">
@@ -30,7 +33,8 @@ function Table({ rows, columns }) {
                   <td key={cellIndex}>{row[column]}</td>
                 )
               })}
-              <td><button onClick={() => handleClick(row)} className='blue-btn'>Responder</button></td>
+              <td><button onClick={() => handleClick(row)} className='blue-btn'>Responder</button></td>      
+              {storedUser.type === "Teacher"?(<td><button className='blue-btn'>Editar</button></td>):null}
             </tr>
           ))}
         </tbody>

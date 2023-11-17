@@ -1,16 +1,56 @@
 {
     "teachers": [
         {
-            "teacher_id": "",
-            "name": "",
-            "email": "",
-            "password": "",
+            "teacher_id": "UES01",
+            "name": "Shihemi Patricia",
+            "email": "patcarr@ues.mx",
+            "password": "shues01",
             "subjects": [
                 {
-                    "subject_id": "",
-                    "name": ""
+                    "subject_id": "1",
+                    "name": "Inteligencia artificial"
                 }
-            ]
+            ],
+            "expedient": "PROFUES01"
+        },
+        {
+            "teacher_id": "UES02",
+            "name": "Viejo Viejo",
+            "email": "vv@ues.mx",
+            "password": "vvues02",
+            "subjects": [
+                {
+                    "subject_id": "2",
+                    "name": "Viejo Viejo"
+                }
+            ],
+            "expedient": "PROFUES02"
+        },
+        {
+            "teacher_id": "3",
+            "name": "Erick Navarro",
+            "email": "en@ues.mx",
+            "password": "enues03",
+            "subjects": [
+                {
+                    "subject_id": "3",
+                    "name": "Auditoria"
+                }
+            ],
+            "expedient": "PROFUES03"
+        },
+        {
+            "teacher_id": "4",
+            "name": "Lobo Solitario",
+            "email": "js@ues.mx",
+            "password": "jsues04",
+            "subjects": [
+                {
+                    "subject_id": "4",
+                    "name": "Diseño Web"
+                }
+            ],
+            "expedient": "PROFUES04"
         }
     ]
 }
