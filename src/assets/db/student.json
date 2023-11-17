@@ -1,21 +1,22 @@
 {
     "students": [
         {
-            "student_id": "",
-            "name": "",
-            "email": "",
-            "password": "",
-            "major": "",
-            "subjects": [
-                {
-                    "teacher_id": "",
-                    "name": ""
-                }
-            ],
-            "credits": ""
+            "name": "Pablo",
+            "lastName": "Gracia",
+            "expedient": "123456",
+            "gpa": "8.5",
+            "type": "Student",
+            "subjects": [1, 2, 3, 4],
+            "img": "https://i.ibb.co/4pFCM21/twisted.gif"
+        },
+        {
+            "name": "David",
+            "lastName": "Valenzuela",
+            "expedient": "78910",
+            "gpa": "8.6",
+            "type": "Student",
+            "subjects": [1, 2, 3, 4],
+            "img": "https://i.ibb.co/9v8Bv9C/imagen-2023-11-16-041407732.png"
         }
-        
-
-
     ]
 } 

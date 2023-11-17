@@ -1,56 +1,36 @@
 {
     "teachers": [
         {
-            "teacher_id": "UES01",
-            "name": "Shihemi Patricia",
-            "email": "patcarr@ues.mx",
-            "password": "shues01",
-            "subjects": [
-                {
-                    "subject_id": "1",
-                    "name": "Inteligencia artificial"
-                }
-            ],
-            "expedient": "PROFUES01"
+            "name": "Patricia",
+            "lastName": "Shihemi",
+            "expedient": "PROF123",
+            "type": "Teacher",
+            "subjects": 1,
+            "img": "https://i.ibb.co/vmmYzh9/imagen-2023-11-16-041252855.png"
         },
         {
-            "teacher_id": "UES02",
-            "name": "Viejo Viejo",
-            "email": "vv@ues.mx",
-            "password": "vvues02",
-            "subjects": [
-                {
-                    "subject_id": "2",
-                    "name": "Viejo Viejo"
-                }
-            ],
-            "expedient": "PROFUES02"
+            "name": "Viejo",
+            "lastName": "Viejo",
+            "expedient": "PROF456",
+            "type": "Teacher",
+            "subjects": 2,
+            "img": "https://scontent.fhmo6-1.fna.fbcdn.net/v/t1.6435-9/67293806_331358077818046_7274083588918738944_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=dd63ad&_nc_ohc=yl4EKjZhLjQAX8zKoKb&_nc_ht=scontent.fhmo6-1.fna&oh=00_AfB13FE_YN-61vF1x7hEapkudURxwAEUwTd-mWZpVhNxDw&oe=657D8FF7"
         },
         {
-            "teacher_id": "3",
-            "name": "Erick Navarro",
-            "email": "en@ues.mx",
-            "password": "enues03",
-            "subjects": [
-                {
-                    "subject_id": "3",
-                    "name": "Auditoria"
-                }
-            ],
-            "expedient": "PROFUES03"
+            "name": "Erick",
+            "lastName": "Navarro",
+            "expedient": "PROF789",
+            "type": "Teacher",
+            "subjects": 3,
+            "img": "https://i.ibb.co/5s0W8vH/imagen-2023-11-16-041224390.png"
         },
         {
-            "teacher_id": "4",
-            "name": "Lobo Solitario",
-            "email": "js@ues.mx",
-            "password": "jsues04",
-            "subjects": [
-                {
-                    "subject_id": "4",
-                    "name": "Diseño Web"
-                }
-            ],
-            "expedient": "PROFUES04"
+            "name": "Jesus",
+            "lastName": "Saucedo",
+            "expedient": "PROF101112",
+            "type": "Teacher",
+            "subjects": 4,
+            "img": "https://i.ibb.co/Jkg3qdd/imagen-2023-11-16-115622485.png"
         }
     ]
 }
