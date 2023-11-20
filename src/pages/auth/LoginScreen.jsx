@@ -13,8 +13,12 @@ function LoginScreen() {
   const userTeacher = teacher.teachers;
 
   const handleLogin = (e) => {
+    if(findUser.lenght == 0){
+      console.log("Este Usuario No Existe");
+    }else{
     e.preventDefault();
     navigate("/app");
+    }
   };
 
   const indexTeacher = userTeacher.findIndex((teacher) => teacher.expedient === username);
