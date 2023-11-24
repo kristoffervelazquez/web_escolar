@@ -3,24 +3,24 @@
     "id": 1,
     "imagePath": "https://camptecnologico.com/wp-content/uploads/2023/04/IA-1.jpg",
     "subjectName": "Inteligencia artificial",
-    "teacher": "PROFUES01"
+    "teacher": "PROF123"
   },
   {
     "id": 2,
     "imagePath": "https://www.filepicker.io/api/file/H3bl0IsGSrKtToIhUWXn",
     "subjectName": "Viejo Viejo",
-    "teacher": "PROFUES02"
+    "teacher": "PROF456"
   },
   {
     "id": 3,
     "imagePath": "https://icc.fcen.uba.ar/wp-content/uploads/2019/10/auditoria-software.jpg",
     "subjectName": "Auditoria",
-    "teacher": "PROFUES03"
+    "teacher": "PROF789"
   },
   {
     "id": 4,
     "imagePath": "https://bslatin.com/wp-content/uploads/2022/09/WEB3.jpg",
     "subjectName": "Diseño Web",
-    "teacher": "PROFUES04"
+    "teacher": "PROF101112"
   }
 ]
