@@ -1,25 +1,25 @@
 [
   {
     "id": 1,
-    "imagePath": "images/math.jpg",
+    "imagePath": "https://camptecnologico.com/wp-content/uploads/2023/04/IA-1.jpg",
     "subjectName": "Inteligencia artificial",
     "teacher": "PROFUES01"
   },
   {
     "id": 2,
-    "imagePath": "images/science.jpg",
+    "imagePath": "https://www.filepicker.io/api/file/H3bl0IsGSrKtToIhUWXn",
     "subjectName": "Viejo Viejo",
     "teacher": "PROFUES02"
   },
   {
     "id": 3,
-    "imagePath": "images/history.jpg",
+    "imagePath": "https://icc.fcen.uba.ar/wp-content/uploads/2019/10/auditoria-software.jpg",
     "subjectName": "Auditoria",
     "teacher": "PROFUES03"
   },
   {
     "id": 4,
-    "imagePath": "images/english.jpg",
+    "imagePath": "https://bslatin.com/wp-content/uploads/2022/09/WEB3.jpg",
     "subjectName": "Diseño Web",
     "teacher": "PROFUES04"
   }

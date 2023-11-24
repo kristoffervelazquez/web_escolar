@@ -22,15 +22,15 @@ export default function Subjects(props) {
             {subjects.map((item, index) => (
                 storedUser.type === "Teacher" && storedUser.subjects === item.id ? (
                 <div className="subjects" key={index}>
-                    {/* <img src={item.imagePath} /> */}
-                    <button onClick={() => handleClick(item)}>{item.subjectName}</button>
+                    { /* <img src={item.imagePath} />*/ }
+                    <img onClick={() => handleClick(item)}  src={item.imagePath}/>
 
                 </div>
             ): storedUser.type === "Student" ?(
                 
                 <div className="subjects" key={index}>
-                    {/* <img src={item.imagePath} /> */}
-                    <button onClick={() => handleClick(item)}>{item.subjectName}</button>
+                    { /*<img src={item.imagePath}/>*/ }
+                 <img onClick={() => handleClick(item)}  src={item.imagePath}/>
 
                 </div>
 
