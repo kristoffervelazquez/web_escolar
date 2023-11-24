@@ -1,4 +1,4 @@
-import React from 'react';
+
 import './css/mailscreen.css';
 import { useState, } from 'react';
 
