@@ -1,4 +1,3 @@
-import React from 'react'
 import "../../CSS/MiddleContainer.css"
 
 const MiddleContainer = ({ children }) => {
@@ -10,6 +9,7 @@ const MiddleContainer = ({ children }) => {
       <div style={{ display: 'flex', flex: 1, padding: '10px' }}>
         <div style={{ flex: 1, overflowY: 'auto' }}>
           {children}
+         
         </div>
       </div>
     </div>

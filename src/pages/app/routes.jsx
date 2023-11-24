@@ -3,7 +3,7 @@ import AppLayout from "../../layout/AppLayout";
 import SubjectScreen from "./SubjectScreen";
 import SequenceScreen from "./SequenceScreen";
 import MailScreen from "./MailScreen";
-
+import App from "../../layout/components/App";
 
 const AppRoutes = {
   path: "app",
@@ -11,7 +11,7 @@ const AppRoutes = {
   children: [
     {
       path: "",
-      element: <div><h1>App</h1></div>,
+      element: <div><App/></div>,
     },
     {
       path: "subject/:id/activities",
