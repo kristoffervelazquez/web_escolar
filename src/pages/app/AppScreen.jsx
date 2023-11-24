@@ -1,9 +1,9 @@
 import Cards from "../../shared/components/Cards"
 
-const App = () => {
+const AppScreen = () => {
   return (
     <div> <Cards/></div>
   )
 }
 
-export default App
+export default AppScreen
