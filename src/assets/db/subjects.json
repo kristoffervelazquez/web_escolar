@@ -3,24 +3,24 @@
     "id": 1,
     "imagePath": "images/math.jpg",
     "subjectName": "Inteligencia artificial",
-    "teacher": "PROFUES01"
+    "teacher": "PROF123"
   },
   {
     "id": 2,
     "imagePath": "images/science.jpg",
     "subjectName": "Viejo Viejo",
-    "teacher": "PROFUES02"
+    "teacher": "PROF456"
   },
   {
     "id": 3,
     "imagePath": "images/history.jpg",
     "subjectName": "Auditoria",
-    "teacher": "PROFUES03"
+    "teacher": "PROF789"
   },
   {
     "id": 4,
     "imagePath": "images/english.jpg",
     "subjectName": "Diseño Web",
-    "teacher": "PROFUES04"
+    "teacher": "PROF101112"
   }
 ]
