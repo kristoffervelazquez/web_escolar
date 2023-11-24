@@ -3,7 +3,7 @@ import AppLayout from "../../layout/AppLayout";
 import SubjectScreen from "./SubjectScreen";
 import SequenceScreen from "./SequenceScreen";
 import MailScreen from "./MailScreen";
-import App from "../../layout/components/App";
+import App from "./AppScreen";
 
 const AppRoutes = {
   path: "app",
