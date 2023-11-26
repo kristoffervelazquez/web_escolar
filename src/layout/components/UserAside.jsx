@@ -6,19 +6,24 @@ import subjectsJson from "../../assets/db/subjects.json"
 const UserAside = () => {
   const subjects = subjectsJson;
   const { id } = useParams();
+  const subjectID=parseInt(id);
+  const findS = subjects.find(item => item.id === subjectID);
+  findS == null ?(console.log("vacio")):(console.log("lleno"));
 
 
   let localUserInfo = localStorage.getItem('user');
   let storedUser = JSON.parse(localUserInfo);
   
   useEffect(() => {
-  }, [id])
+  }, [id]);
   return (
     <aside className="news">
+
+    {findS == null ?(
+      <>
       <header className="channels-header focusable">
         <h3 role="header" className="channels-header-name">{storedUser.type}</h3>
-      </header>{
-
+      </header>
           <section className='news-img-container'>
             <img className='avatar' src={storedUser.img} alt="123" />
             <div className='teacher-info'>
@@ -27,7 +32,22 @@ const UserAside = () => {
               <p>{storedUser.expedient}@ues.mx</p>
             </div>
           </section>
-      }
+          </>
+    ):(
+      <>
+      <header className="channels-header focusable">
+        <h3 role="header" className="channels-header-name">Materia</h3>
+      </header>
+          <section className='news-img-container'>
+            <img className='avatar' src={findS.imagePath} alt="123" />
+            <div className='teacher-info'>
+              <h3>{findS.subjectName}</h3>
+            </div>
+          </section>
+          </>
+    )}
+      
+
 
 
       {/* // <header className="channels-list-header focusable">
