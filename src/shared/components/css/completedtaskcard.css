@@ -1,0 +1,93 @@
+.card-container{
+    background-color:#252525;      
+    display: flex;
+    flex-direction: column;    
+    transition: all 0.5s ease-in-out;
+}
+
+.card-container:hover {
+    border-left: 5px solid #7289da;
+    background-color:#3b3b3b; 
+}
+
+
+.act-date {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+/* Info de la act*/
+
+.act-info .card-header {       
+    
+    margin-bottom: 10px;
+    font-size: 14px;
+    color:#969799;
+}
+
+.act-info .act-name {
+    font-size: 18px;
+    color: #bfbfbf;
+    margin-bottom: 10px;;
+    flex-wrap: wrap;
+}
+
+/*Fecha de entrega*/
+
+.date-container {
+    display: flex;     
+    flex-direction: column;
+    justify-content: center;      
+    border-left: 1px solid gray;
+    padding-left: 10px;
+}
+.date-container .expired-date {    
+    font-size: 14px;
+    color:#969799; 
+    text-align: center;   
+}
+
+/*Footer*/
+
+.card-footer {
+    padding: 7px;
+    display: inline-flex;
+    justify-content: space-between;
+    /*border-top: 1px solid gray; */
+}
+
+.card-footer button {
+    color: white;  
+    border-radius: 50px;        
+    transition: all 0.5s ease-in-out;
+    width: 90px;
+    padding: 6px;
+    margin-right: 20px;    
+    margin-bottom: 5px;
+}
+
+.card-footer .send {
+    background-color: #7289da;
+    border: #7289da;
+}
+
+.card-footer .send:hover {
+ background: #323d62 ;
+    color: rgb(217, 217, 217);
+    cursor: pointer;
+}
+
+.card-footer .details {
+    background-color: #4a4a4a;
+    border: #4a4a4a;
+}
+
+.card-footer .details:hover {
+    background-color:#252525;    
+}
+
+.calif {
+    display: flex;
+    align-items: flex-end;
+}

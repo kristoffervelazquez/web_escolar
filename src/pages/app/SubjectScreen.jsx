@@ -3,6 +3,8 @@ import Table from '../../shared/components/Table';
 import { useParams } from 'react-router-dom';
 import Assignment from '../../classes/assignment';
 import '../../CSS/SubjectButtons.css'
+import CompletedTaskCard from '../../shared/components/CompletedTaskCard';
+import TodoTaskCard from '../../shared/components/TodoTaskCard';
 
 // const localAssignments = JSON.parse(localStorage.getItem('Assigments')) || [];
 
@@ -39,6 +41,11 @@ const SubjectScreen = () => {
     <>
       <Table rows={assignments} columns={columns} />
       <button className='button-add' onClick={Assignment.setDummyData}>Llenar bdd</button>
+      <br />
+      <br />
+      <CompletedTaskCard/>
+      <br />
+      <TodoTaskCard/>
     </>
   )
 }
