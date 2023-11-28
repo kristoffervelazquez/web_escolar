@@ -1,13 +1,22 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import ShowSequence from '../../shared/components/ShowSequence';
-const link = "https://www.ues.mx/archivos/secuencias/022_14_COM11A2.pdf";
+import Subjects from "../../assets/db/subjects.json"
+import { useParams } from 'react-router-dom';
 const SequenceScreen = () => {
+    const { id } = useParams();
+    const [sequence, setSequence] = useState('') 
+    useEffect(()=>{
+        setSequence(Subjects[id-1].sequence)
+    },[id])
+    console.log(sequence)
     return (
 
         <>
-            <ShowSequence url={link} />
+            <ShowSequence url={sequence} />
         </>
     );
 }
+
+
 
 export default SequenceScreen
