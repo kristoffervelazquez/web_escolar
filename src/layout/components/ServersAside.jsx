@@ -29,7 +29,7 @@ const ServersAside = () => {
  
       <div className="subjects">
       <Subjects subjects={subjectInfo}/>
-      <button class="logOut" onClick={handleClicklogOut}>
+      <button className="logOut" onClick={handleClicklogOut}>
         Cerrar Sesion
       </button>
       </div>
