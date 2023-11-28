@@ -67,6 +67,7 @@
 
 .carrusel .img {
   width: calc(100% / 5 - 2em);
+  border-radius: 0;
   min-height: 10vh;
 }
 

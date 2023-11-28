@@ -3,6 +3,8 @@ import Table from '../../shared/components/TableLegacy';
 import { useParams } from 'react-router-dom';
 import Assignment from '../../classes/assignment';
 import '../../CSS/SubjectButtons.css'
+import CompletedTaskCard from '../../shared/components/CompletedTaskCard';
+import TodoTaskCard from '../../shared/components/TodoTaskCard';
 import Modal from '../../shared/components/Modal';
 
 // const localAssignments = JSON.parse(localStorage.getItem('Assigments')) || [];
@@ -76,6 +78,11 @@ const SubjectScreen = () => {
         user.type == "Teacher" &&
         <>
           <button className='button-add' onClick={Assignment.setDummyData}>Llenar bdd</button>
+      <br />
+      <br />
+      <CompletedTaskCard/>
+      <br />
+      <TodoTaskCard/>
           <button className='button-add' onClick={handleOpenTaskModal}>Nueva tarea</button>
           <Modal show={showModal} onClose={() => setShowModal(false)}>
             <form>
