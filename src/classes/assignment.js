@@ -5,12 +5,12 @@ import path from 'path';
 class Assignment {
     #answered;
     #grade;
-    constructor({ subject_id, title, description }) {
+    constructor({ subject_id, title, description, date = Date.now() }) {
         this.assignment_id = uuid();
         this.subject_id = subject_id;
         this.title = title;
         this.description = description;
-        this.date = new Date();
+        this.date = new Date(date);
         this.file = null;
         this.#grade = 0;
         this.#answered = false;
@@ -35,8 +35,7 @@ class Assignment {
         // Store the updated data back in localStorage
         localStorage.setItem('Assigments', JSON.stringify(existingData));
     };
-
-
+    
     static getAssignments(id) {
         // Retrieve existing data from localStorage by subject_id (number 1-6), or initialize an empty array if it's the first time
         const existingData = JSON.parse(localStorage.getItem('Assigments')) || [];

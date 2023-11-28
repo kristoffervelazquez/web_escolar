@@ -1,16 +1,23 @@
-import React, { useEffect } from 'react'
-import Table from '../../shared/components/Table';
+import React, { useEffect, useState } from 'react'
+import Table from '../../shared/components/TableLegacy';
 import { useParams } from 'react-router-dom';
 import Assignment from '../../classes/assignment';
 import '../../CSS/SubjectButtons.css'
 import CompletedTaskCard from '../../shared/components/CompletedTaskCard';
 import TodoTaskCard from '../../shared/components/TodoTaskCard';
+import Modal from '../../shared/components/Modal';
 
 // const localAssignments = JSON.parse(localStorage.getItem('Assigments')) || [];
 
 const SubjectScreen = () => {
+  const user = JSON.parse(localStorage.getItem('user'));
   const [assignments, setAssignments] = React.useState([]);
   const { id } = useParams();
+  const [showModal, setShowModal] = useState(false);
+  const [title, setTitle] = useState('')
+  const [description, setDescription] = useState('')
+  const [date, setDate] = useState('')
+
 
   const getAssignments = async () => {
     const localAssignments = await Assignment.getAssignmentsBySubject(id)
@@ -29,28 +36,72 @@ const SubjectScreen = () => {
     setAssignments(subjectAssignments)
   }
 
+  const handleOpenTaskModal = () => {
+    setShowModal(true)
+  }
 
+  const handleAddNewTask = (e) => {
+    e.preventDefault()
+    if (!title || !description || !date) {
+      return alert('Todos los campos son necesarios')
+    }
+
+    // Se crea la tarea
+    const assignment = new Assignment({
+      subject_id: id,
+      title: title,
+      description,
+      date: date
+    })
+    // Se publica la tarea
+    assignment.publish()
+
+    // Se limpia el estado
+    setDate('')
+    setTitle('')
+    setDescription('')
+    getAssignments()
+    setShowModal(false)
+
+
+  }
 
   useEffect(() => {
-    document.title = 'Tareas'
     getAssignments()
   }, [id])
 
-
   return (
+
     <>
       <Table rows={assignments} columns={columns} />
-      <button className='button-add' onClick={Assignment.setDummyData}>Llenar bdd</button>
+      {
+        user.type == "Teacher" &&
+        <>
+          <button className='button-add' onClick={Assignment.setDummyData}>Llenar bdd</button>
       <br />
       <br />
       <CompletedTaskCard/>
       <br />
       <TodoTaskCard/>
+          <button className='button-add' onClick={handleOpenTaskModal}>Nueva tarea</button>
+          <Modal show={showModal} onClose={() => setShowModal(false)}>
+            <form>
+              <h2>Titulo de la tarea</h2>
+              <input value={title} onChange={e => setTitle(e.target.value)} type="text" placeholder="Titulo" />
+              <h2>Descripción de la tarea</h2>
+              <input value={description} onChange={e => setDescription(e.target.value)} type="text" placeholder="Descripcion" />
+              <h2>Fecha de cierre</h2>
+              <input value={date} onChange={e => setDate(e.target.value)} type="datetime-local" />
+
+              <button onClick={handleAddNewTask}>Publicar tarea</button>
+            </form>
+          </Modal>
+        </>
+      }
+
     </>
   )
 }
 
-export default SubjectScreen
-const rows = [{ "assignment_id": 1698982385812, "subject_id": "Actividad 1", "title": 1, "description": "Sobarme los huevos", "date": "2023-11-03T03:33:05.812Z", "grade": "0/10" }]
-
+export default SubjectScreen;
 const columns = ['ID', 'Descripcion', 'Fecha', 'Calificacion',];

@@ -1,8 +1,8 @@
 
- import "./css/modal.css";
+import "./css/modal.css";
 
 const Modal = ({ show, onClose, children }) => {
-const modalTransition = show ? "modal active" : "modal";
+  const modalTransition = show ? "modal active" : "modal";
   if (!show) {
     return null;
   }
@@ -13,9 +13,8 @@ const modalTransition = show ? "modal active" : "modal";
         <button className="modal-close" onClick={onClose}>
           X
         </button>
-        <div className="modal-content">{children}
-        
-        </div>
+
+        <div className="modal-content">{children}</div>
       </div>
     </div>
   );
