@@ -4,15 +4,17 @@ import { useState } from "react";
 import Modal from "./Modal";
 
 const user = JSON.parse(localStorage.getItem("user"));
+const columns = ['assignment_id', 'title', 'description', 'date'];
 
-function Table({ rows, columns }) {
+function Table({ rows }) {
   const [showModal, setShowModal] = useState(false);
   const [assignment, setAssignment] = useState(null);
 
   const handleClick = async (row) => {
-    const task = await Assignment.getAssignmentById(row.ID);
+    const task = await Assignment.getAssignmentById(row.assignment_id);
     setAssignment(task);
     setShowModal(true);
+    console.log(task)
 
   };
 
@@ -20,8 +22,14 @@ function Table({ rows, columns }) {
     setShowModal(false);
   };
 
-  let localUserInfo = localStorage.getItem("user");
-  let storedUser = JSON.parse(localUserInfo);
+  const reviewTask = () => {
+    const grade = document.querySelector("input").value;
+    Assignment.updateAssignment(assignment.assignment_id, assignment.title, assignment.description, grade)
+  }
+
+
+  
+
 
   return (
     <div className="tareas-container">
@@ -44,10 +52,10 @@ function Table({ rows, columns }) {
               })}
               <td>
                 <button onClick={() => handleClick(row)} className="blue-btn">
-                  Responder
+                  Calificar
                 </button>
               </td>
-              {storedUser.type === "Teacher" ? (
+              {/* {storedUser.type === "Teacher" ? (
                 <td>
                   <button
                     onClick={() => handleClick(row)}
@@ -56,7 +64,7 @@ function Table({ rows, columns }) {
                     Editar
                   </button>
                 </td>
-              ) : null}
+              ) : null} */}
             </tr>
           ))}
         </tbody>
@@ -64,12 +72,12 @@ function Table({ rows, columns }) {
 
 
       <Modal show={showModal} onClose={closeModal}>
-        
-       
-        { assignment && 
-        
-            user.type == "Student"?
-            <div>
+
+
+        {assignment &&
+
+          user.type == "Student" ?
+          <div>
             {/* Aquí puedes mostrar la información del elemento seleccionado */}
             <h1>{assignment.title}</h1>
             <h2>{assignment.description}</h2>
@@ -85,12 +93,15 @@ function Table({ rows, columns }) {
           </div>
           : <div>
             <input type="text" placeholder="Calificacion" />
-
+            <br />
+            <button onClick={reviewTask}>
+              calificar
+            </button>
           </div>
 
         }
-        
-        
+
+
       </Modal>
     </div>
   );
