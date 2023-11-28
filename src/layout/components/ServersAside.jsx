@@ -8,10 +8,16 @@ import"../../CSS/ServersAside.css"
 const ServersAside = () => {
   const subjectInfo = subjectsJson;
   const navigate = useNavigate();
+  
 
   const handleClickHome = () => {
     navigate(`/app`);
   }
+  const handleClicklogOut = () => {
+        localStorage.removeItem("user");
+        navigate('/');
+      }
+      
   return (
     <aside className="servers">
       <div className="home">
@@ -20,8 +26,12 @@ const ServersAside = () => {
         </button>
       </div>
 
+ 
       <div className="subjects">
       <Subjects subjects={subjectInfo}/>
+      <button class="logOut" onClick={handleClicklogOut}>
+        Cerrar Sesion
+      </button>
       </div>
     
     </aside>
