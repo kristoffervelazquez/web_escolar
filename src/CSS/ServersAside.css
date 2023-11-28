@@ -14,6 +14,19 @@
   color: white;
 }
 
+.home:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  border-radius: 40%;
+}
+
+.logOut:hover {
+  background-color: #b23b3b;
+  cursor: pointer;
+  transform: scale(1.05);
+  border-radius: 50%; 
+}
+
 .servers {
     height: 100vh;
     background: #1e2124;
