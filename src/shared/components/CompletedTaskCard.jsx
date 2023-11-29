@@ -1,32 +1,45 @@
-import "./css/completedtaskcard.css";
 
-function CompletedTaskCard() { 
+import "./css/todotaskcard.css"
+import Modal from "./Modal";
+import { useState } from "react";
 
+
+function CompletedTaskCard ({assignment}) {
+    console.log(assignment)
+    const [showModal, setShowModal] = useState(false);
+    const closeModal = () => {
+        setShowModal(false);
+    }
     return (
-        <div> 
-            <section className="card-container">                
-                <section className="act-date">
-                    <section className="act-info">
-                        <div className="card-header"> Actividad 1</div>
-                        <div className="act-name"> Nombre de la actividad</div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                    </section>
-                    <section className="date-container">
-                        <div className="expired-date">Fecha de entrega</div>
-                        <h1>28</h1>
-                        <p>diciembre</p>
-                    </section>
-                </section>                
-                <section className="card-footer">
-                    <div className="buttons">
-                        <button className="send">Responder</button>    
-                        <button className="details">Detalles</button>    
-                    </div>                    
-                    <div className="calif">Calificación: XX </div>
-                </section>
-            </section>           
+        <div>
+            <section className="main-container">
+                
+                <div className="card-id">{assignment.assignment_id}</div>
+                <div className="card-containerr">
+                    <div className="actName">   
+                        {assignment.title}                       
+                    </div>
+                    <div className="act-desc">
+                    {assignment.description}
+                    </div>
+                    {/* <button className="sendd">
+                        Responder
+                    </button>              */}
+                    <button className="detalles">Detalles</button>     
+                </div>
+                <div className="card-footerr">
+                    <div className="date">
+                        {new Date(assignment.date).toLocaleDateString('es-MX', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric'} )}
+                    </div>
+                    <div className="date">
+                        Calificación: {assignment.grade}
+                    </div>
+                </div>
+            </section>
 
         </div>
-    );}
+    );
+
+}
 
 export default CompletedTaskCard;
