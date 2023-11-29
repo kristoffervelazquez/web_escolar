@@ -20,13 +20,11 @@ const ServersAside = () => {
       
   return (
     <aside className="servers">
+      
       <div className="home">
-        <button onClick={handleClickHome}>
-          Inicio
-        </button>
+      <img src="https://cdn-icons-png.flaticon.com/512/5974/5974907.png" onClick={handleClickHome}></img>
       </div>
-
- 
+      
       <div className="subjects">
       <Subjects subjects={subjectInfo}/>
       <button className="logOut" onClick={handleClicklogOut}>
