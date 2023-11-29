@@ -97,38 +97,38 @@ function Table({ rows }) {
       </table>
 
 
-      <Modal show={showModal} onClose={closeModal}>
-
-
-        {assignment &&
-
-          user.type == "Student" ?
-          <div>
-            {/* Aquí puedes mostrar la información del elemento seleccionado */}
-            <h1>{assignment.title}</h1>
-            <h2>{assignment.description}</h2>
-            <h2>Adjuntar Archivo</h2>
-            <input type="file" />
-            <br />
-            <h2>Comentarios para el profesor</h2>
-            <textarea cols="80" rows="10"></textarea>
-            <br />
-            <button onClick={closeModal}>Cancelar</button>
-            <button onClick={closeModal}>Subir</button>
-            {/* Otros detalles del elemento */}
+      <Modal show={showModal} onClose={closeModal} className="modal">
+      {assignment && user.type === 'Student' ? (
+        <div className="modal-content">
+          <h1>{assignment.title}</h1>
+          <h2>{assignment.description}</h2>
+          <h2>Adjuntar Archivo</h2>
+          <div
+            className={fileDragged ? 'file-drop-area active' : 'file-drop-area'}
+            onDragOver={handleDragOver}
+            onDragLeave={handleDragLeave}
+            onDrop={handleDrop}
+          >
+            <input
+              type="file"
+              onChange={handleFileChange}
+              className="file-input"
+            />
+            <p>Arrastra y suelta archivos aquí o haz clic para seleccionar</p>
           </div>
-          : <div>
-            <input type="text" placeholder="Calificacion" />
-            <br />
-            <button onClick={reviewTask}>
-              calificar
-            </button>
-          </div>
-
-        }
-
-
-      </Modal>
+          {file && <p>Archivo seleccionado: {file.name}</p>}
+          <h2>Comentarios para el profesor</h2>
+          <textarea cols="80" rows="10"></textarea>
+          <br />
+          <button onClick={closeModal}>Cancelar</button>
+          <button onClick={closeModal}>Subir</button>
+        </div>
+      ) : (
+        <div>
+          <input type="text" placeholder="Calificacion" />
+        </div>
+      )}
+    </Modal>
     </div>
   );
 }
