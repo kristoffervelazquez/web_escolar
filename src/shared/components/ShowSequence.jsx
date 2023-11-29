@@ -3,6 +3,7 @@ import './css/pdf.css';
 
 function ShowSequence (props){
     const {url} = props;
+    
     return(
 
         <div className='pdf-element'>
