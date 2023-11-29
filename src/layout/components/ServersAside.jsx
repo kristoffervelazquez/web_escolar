@@ -22,14 +22,12 @@ const ServersAside = () => {
     <aside className="servers">
       
       <div className="home">
-      <img src="https://cdn-icons-png.flaticon.com/512/5974/5974907.png" onClick={handleClickHome}></img>
+      <img src="https://us.123rf.com/450wm/ahasoft2000/ahasoft20001507/ahasoft2000150700705/42497596-inicio-icono-desde-primitivos-redondos-overcolor-set-este-bot%C3%B3n-redondo-y-plano-se-dibuja-con-los.jpg" onClick={handleClickHome}></img>
       </div>
-      
+
       <div className="subjects">
       <Subjects subjects={subjectInfo}/>
-      <button className="logOut" onClick={handleClicklogOut}>
-        Cerrar Sesion
-      </button>
+      <img src='https://static.vecteezy.com/system/resources/previews/026/337/285/non_2x/logout-icon-exit-in-trendy-flat-style-flat-web-mobile-icon-sign-symbol-button-element-illustration-isolated-on-white-background-vector.jpg' onClick={handleClicklogOut}></img>
       </div>
     
     </aside>
