@@ -13,11 +13,16 @@ function LoginScreen() {
   const userTeacher = teacher.teachers;
 
   const handleLogin = (e) => {
-    if(findUser.lenght == 0){
-      console.log("Este Usuario No Existe");
-    }else{
     e.preventDefault();
-    navigate("/app");
+    if (!findUser) {
+      alert("Este Usuario No Existe");
+    } else {
+      let userJson = JSON.stringify(findUser);
+      localStorage.setItem("user", userJson);
+      setTimeout(() => {
+        navigate("/app");
+      }, 1000)
+      // navigate(0)
     }
   };
 
@@ -27,15 +32,15 @@ function LoginScreen() {
   const findUser =
     indexTeacher !== -1
       ? {
-          name: userTeacher[indexTeacher].name,
-          lastName: userTeacher[indexTeacher].lastName,
-          expedient: userTeacher[indexTeacher].expedient,
-          type: userTeacher[indexTeacher].type,
-          subjects: userTeacher[indexTeacher].subjects,
-          img: userTeacher[indexTeacher].img,
-        }
+        name: userTeacher[indexTeacher].name,
+        lastName: userTeacher[indexTeacher].lastName,
+        expedient: userTeacher[indexTeacher].expedient,
+        type: userTeacher[indexTeacher].type,
+        subjects: userTeacher[indexTeacher].subjects,
+        img: userTeacher[indexTeacher].img,
+      }
       : indexUser !== -1
-      ? {
+        ? {
           name: userStudent[indexUser].name,
           lastName: userStudent[indexUser].lastName,
           expedient: userStudent[indexUser].expedient,
@@ -44,10 +49,9 @@ function LoginScreen() {
           subjects: userStudent[indexUser].subjects,
           img: userStudent[indexUser].img,
         }
-      : null;
+        : null;
 
-  let userJson = JSON.stringify(findUser);
-  localStorage.setItem("user", userJson);
+
 
   return (
     <section className="contenedor">

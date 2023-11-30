@@ -16,7 +16,7 @@ const AppRoutes = {
     },
     {
       path: "subject/:id/activities",
-      element: <SubjectScreen />,
+      element: <SubjectScreen />
     },
     {
       path: "subject/:id/sequence",
