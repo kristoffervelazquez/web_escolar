@@ -1,8 +1,6 @@
 import { useState } from "react";
 import "./css/completedtaskcard.css";
 import Modal from "./Modal";
-import "./CSS/modal.css";
-
 
 function TodoTaskCard({ assignment }) {
   const [showModal, setShowModal] = useState(false);

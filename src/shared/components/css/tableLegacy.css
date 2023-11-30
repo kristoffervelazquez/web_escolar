@@ -1,0 +1,25 @@
+
+ .text-area textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+ .tableLegacy button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    background-color: #2E3136;
+    color: #fff;
+  }
+  
+  .table-LegacyH button:hover {
+    background-color: #000;
+  }
+  
+
+  
