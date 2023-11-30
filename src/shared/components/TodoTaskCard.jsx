@@ -3,8 +3,10 @@ import "./css/completedtaskcard.css";
 import Modal from "./Modal";
 import { supabase } from "../../supabase/supabase";
 import Assignment from "../../classes/assignment";
+import { useNavigate } from "react-router-dom";
 
 function TodoTaskCard({ assignment }) {
+    const navigate = useNavigate();
     const [showModal, setShowModal] = useState(false);
     const [fileDragged, setFileDragged] = useState(false);
     const [file, setFile] = useState(null);
@@ -44,6 +46,8 @@ function TodoTaskCard({ assignment }) {
             setFile(null)
             closeModal()
             alert('Archivo subido correctamente')
+            navigate(0)
+
         } catch (error) {
             console.log(error);
             return alert('Ocurrió un error al subir el archivo')
