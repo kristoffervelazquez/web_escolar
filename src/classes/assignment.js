@@ -35,7 +35,7 @@ class Assignment {
         // Store the updated data back in localStorage
         localStorage.setItem('Assigments', JSON.stringify(existingData));
     };
-    
+
     static getAssignments(id) {
         // Retrieve existing data from localStorage by subject_id (number 1-6), or initialize an empty array if it's the first time
         const existingData = JSON.parse(localStorage.getItem('Assigments')) || [];
@@ -102,6 +102,20 @@ class Assignment {
         // update assignment file
         filteredData[0].file = file;
         filteredData[0].answered = true;
+
+        // update localStorage with new data
+        localStorage.setItem('Assigments', JSON.stringify(existingData));
+    }
+
+    static reviewAssignment(assignment_id, grade) {
+        // update grade from assignment with assignment_id
+        const existingData = JSON.parse(localStorage.getItem('Assigments')) || [];
+
+        // Filter the data to only include assignment_id
+        const filteredData = existingData.filter((data) => data.assignment_id === assignment_id);
+
+        // update assignment grade
+        filteredData[0].grade = grade;
 
         // update localStorage with new data
         localStorage.setItem('Assigments', JSON.stringify(existingData));
