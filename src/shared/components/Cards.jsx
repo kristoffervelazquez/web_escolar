@@ -1,4 +1,4 @@
-import cards from "../../CSS/Cards.css";
+import "../../CSS/Cards.css";
 import subjectsJson from "../../assets/db/subjects.json";
 
 const Cards = () => {
