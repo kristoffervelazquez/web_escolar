@@ -4,6 +4,7 @@ import SubjectScreen from "./SubjectScreen";
 import SequenceScreen from "./SequenceScreen";
 import MailScreen from "./MailScreen";
 import AppScreen from "./AppScreen";
+import ShowMaterial from "../../shared/components/ShowMaterial";
 
 const AppRoutes = {
   path: "app",
@@ -27,7 +28,7 @@ const AppRoutes = {
     },
     {
       path: "subject/:id/material",
-      element: <div>Material</div>,
+      element: <ShowMaterial/>,
     },
 
   ],
