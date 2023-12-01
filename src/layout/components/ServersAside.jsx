@@ -14,10 +14,13 @@ const ServersAside = () => {
     navigate(`/app`);
   }
   const handleClicklogOut = () => {
-        localStorage.removeItem("user");
-        navigate('/');
+    const shouldLogOut = window.confirm("¿Estás seguro de que deseas cerrar sesión?");
+
+    if (shouldLogOut) {
+      localStorage.removeItem("user");
+      navigate('/');
       }
-      
+    }
   return (
     <aside className="servers">
       
