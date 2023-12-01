@@ -45,29 +45,42 @@
   background-color: #0056b3;
 }
 
+.aparicion-animada {
+  opacity: 0;
+  animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .carrusel {
   width: 100%;
   max-width: 120em;
-  padding: 5em;
+  padding: -1em;
   overflow: hidden;
   
 }
 
 .carrusel .grande {
-  width: 500%;
+  width: 100%;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
   padding: 2em;
   transition: all .5s ease;
-  transform: translateX(-40%);
-  background-color: #0f3460;
+  transform: translateX(0%);
 }
 
 .carrusel .img {
   width: calc(100% / 5 - 2em);
-  border-radius: 0;
+  border-radius: 5px;
   min-height: 10vh;
 }
 
@@ -90,4 +103,45 @@
 
 .carrusel .punto.activo{
   background-color: rgba(245, 163, 11, 0.842)
+}
+
+.Novedades {
+  color: #09417e;
+  background-color: #ededed;
+  padding-top: 2%;
+}
+
+.informacion-1 {
+  display: flex;
+  align-items: center;
+  font-size: 2em;
+}
+
+.imagen-1 {
+  flex: 1;
+  height: auto;
+}
+
+.textoInformativo-1 {
+  flex: 1;
+  max-width: 50%;
+  padding: 30px;
+
+}
+
+.informacion-2 {
+  display: flex;
+  align-items: center;
+  font-size: 2em;
+}
+
+.imagen-2 {
+  flex: 1;
+  height: auto;
+}
+
+.textoInformativo-2 {
+  flex: 1;
+  max-width: 50%;
+  padding: 30px;
 }
