@@ -1,6 +1,7 @@
 import { v4 as uuid } from 'uuid';
 import fs from 'fs';
 import path from 'path';
+import Subjects from "../assets/db/subjects.json"
 
 class Assignment {
     #answered;
@@ -57,6 +58,22 @@ class Assignment {
         // Return the filtered data
         return filteredData;
     }
+    
+    static async getMaterialsById(subjectId) {
+        
+        const subjectID=parseInt(subjectId);
+        console.log(subjectID)
+        // Find the subject with the given id
+        const material = Subjects.find((data) => data.id === subjectID);
+      
+        // If the subject is found, return its materials
+        if (material) {
+          return material.materials;
+        }
+      
+        // If the subject is not found, return null or handle it as needed
+        return null;
+      }
 
     static getAssignmentById(id) {
         // Retrieve existing data from localStorage, or initialize an empty array if it's the first time
