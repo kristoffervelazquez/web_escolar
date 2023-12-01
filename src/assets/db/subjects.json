@@ -5,7 +5,13 @@
     "subjectName": "Inteligencia artificial",
     "teacher": "PROF123",
     "teacherImg": "https://i.ibb.co/vmmYzh9/imagen-2023-11-16-041252855.png",
-    "sequence": "https://www.ues.mx/archivos/secuencias/022_14_COM33C1.pdf"
+    "sequence": "https://www.ues.mx/archivos/secuencias/022_14_COM33C1.pdf",
+    "materials": [
+      {"type": "Material IA", "url": "https://drive.google.com/file/d/1ibhi7LDqghjUosCaw6_mxA-TlPQivwT9/view"},
+      {"type": "Material Agentes", "url": "https://drive.google.com/file/d/1PT9ieQIfzK5S5oaoCEeXEZpGGjpYdN8a/view"},
+      {"type": "Material Busqueda No Informada", "url": "https://drive.google.com/file/d/1IgiGY-BYEVQU8Vc5UW-eEUDFbk0BJSW_/view"},
+      {"type": "Material Agentes Inteligentes", "url": "https://drive.google.com/file/d/1zLMxRiWs2KI1WlegRIVyKpJ_xf5rnAFR/view"}
+    ]
   },
   {
     "id": 2,
@@ -13,7 +19,13 @@
     "subjectName": "Viejo Viejo",
     "teacher": "PROF456",
     "teacherImg": "https://scontent.fhmo6-1.fna.fbcdn.net/v/t1.6435-9/67293806_331358077818046_7274083588918738944_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=dd63ad&_nc_ohc=yl4EKjZhLjQAX8zKoKb&_nc_ht=scontent.fhmo6-1.fna&oh=00_AfB13FE_YN-61vF1x7hEapkudURxwAEUwTd-mWZpVhNxDw&oe=657D8FF7",
-    "sequence": "https://www.ues.mx/archivos/secuencias/022_14_ADM35C1.pdf"
+    "sequence": "https://www.ues.mx/archivos/secuencias/022_14_ADM35C1.pdf",
+    "materials": [
+      {"type": "Material Importancia Administracion", "url": "https://importanciade.com/la-administracion/"},
+      {"type": "Material Elementos Basicos", "url": "https://dgep.uas.edu.mx/librosdigitales/6to_SEMESTRE/elementos_basicos__de_administracion.pdf"},
+      {"type": "Material Puestos Administrativos", "url": "https://www.euroinnova.edu.es/blog/descripcion-de-puestos-administrativos"},
+      {"type": "Material Empleos Administracion", "url": "https://mx.indeed.com/orientacion-profesional/como-encontrar-empleo/por-que-importante-administracion-empresa"}
+    ]
   },
   {
     "id": 3,
@@ -21,7 +33,13 @@
     "subjectName": "Auditoria",
     "teacher": "PROF789",
     "teacherImg": "https://i.ibb.co/5s0W8vH/imagen-2023-11-16-041224390.png",
-    "sequence": "https://www.ues.mx/archivos/secuencias/022_14_AUD07C1.pdf"
+    "sequence": "https://www.ues.mx/archivos/secuencias/022_14_AUD07C1.pdf",
+    "materials": [
+      {"type": "Material Auditoria", "url": "https://drive.google.com/file/d/1balU-Q4RYphRKAk1hwLaIbDYM_1sWPRU/view"},
+      {"type": "Material Auditoria Fisica", "url": "https://drive.google.com/file/d/1Z73OLhO6ZwFBihrAG9ZpV17wFR1UuhZj/view"},
+      {"type": "Material Cuestionario", "url": "https://drive.google.com/file/d/1mPB_XRD0Aih89kOq4hMnwKxg_c5i_znE/view"},
+      {"type": "Material Formato", "url": "https://drive.google.com/file/d/15mM5w1TSLe92FsAABd2xcZ1vdL4JfN7Q/view"}
+    ]
   },
   {
     "id": 4,
@@ -29,6 +47,12 @@
     "subjectName": "Diseño Web",
     "teacher": "PROF101112",
     "teacherImg": "https://i.ibb.co/Jkg3qdd/imagen-2023-11-16-115622485.png",
-    "sequence": "https://www.ues.mx/archivos/secuencias/022_COM43C1_14.pdf"
+    "sequence": "https://www.ues.mx/archivos/secuencias/022_COM43C1_14.pdf",
+    "materials": [
+      {"type": "Son cosas de la vida", "url": "https://img.desmotivaciones.es/201204/motapod_1.jpg"},
+      {"type": "Sascuach", "url": "https://scx1.b-cdn.net/csz/news/800a/2013/bigfootgenom.jpg"},
+      {"type": "Leccion PHP", "url": "https://media.tenor.com/W89JGWHhX6wAAAAd/php.gif"},
+      {"type": "Flex-Box", "url": "https://flexboxfroggy.com/#es"}
+    ]
   }
 ]
