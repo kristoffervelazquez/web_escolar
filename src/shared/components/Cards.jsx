@@ -1,10 +1,8 @@
-import cards from "../../CSS/Cards.css";
+import "../../CSS/Cards.css";
 import subjectsJson from "../../assets/db/subjects.json";
 
-let localUserInfo = localStorage.getItem("user");
-let storedUser = JSON.parse(localUserInfo);
-
 const Cards = () => {
+  const storedUser = JSON.parse(localStorage.getItem("user"));
   return (
     <div className="container">
       {subjectsJson.map((item, index) =>

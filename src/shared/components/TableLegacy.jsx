@@ -2,13 +2,14 @@ import "./css/table.css";
 import Assignment from "../../classes/assignment";
 import { useState } from "react";
 import Modal from "./Modal";
-
-const user = JSON.parse(localStorage.getItem("user"));
+import student from "../../assets/db/student.json";
 const columns = ['assignment_id', 'title', 'description', 'date'];
+const students = student.students;
 
 function Table({ rows }) {
   const [showModal, setShowModal] = useState(false);
   const [assignment, setAssignment] = useState(null);
+  const [grade, setGrade] = useState(0);
 
   const handleClick = async (row) => {
     const task = await Assignment.getAssignmentById(row.assignment_id);
@@ -23,13 +24,8 @@ function Table({ rows }) {
   };
 
   const reviewTask = () => {
-    const grade = document.querySelector("input").value;
-    Assignment.updateAssignment(assignment.assignment_id, assignment.title, assignment.description, grade)
+    Assignment.reviewAssignment(assignment.assignment_id, grade)
   }
-
-
-  
-
 
   return (
     <div className="tareas-container">
@@ -72,31 +68,32 @@ function Table({ rows }) {
 
 
       <Modal show={showModal} onClose={closeModal}>
-
-
         {assignment &&
-
-          user.type == "Student" ?
           <div>
-            {/* Aquí puedes mostrar la información del elemento seleccionado */}
-            <h1>{assignment.title}</h1>
-            <h2>{assignment.description}</h2>
-            <h2>Adjuntar Archivo</h2>
-            <input type="file" />
-            <br />
-            <h2>Comentarios para el profesor</h2>
-            <textarea cols="80" rows="10"></textarea>
-            <br />
-            <button onClick={closeModal}>Cancelar</button>
-            <button onClick={closeModal}>Subir</button>
-            {/* Otros detalles del elemento */}
-          </div>
-          : <div>
-            <input type="text" placeholder="Calificacion" />
+            {
+              students.map(student => {
+                return (
+                  <div key={student.expedient} className="container">
+                    <p>{student.expedient}</p> 
+                    <input value={grade} onChange={e => setGrade(e.target.value)} type="number" placeholder="Calificación" />
+                    <br />
+                    <button onClick={reviewTask}>
+                      Calificar
+                    </button>
+                    <a href={assignment.file} target="_blank">
+                      <button>
+                        Ver archivo
+                      </button>
+                    </a>
+                  </div>
+                )
+              })
+            }
+            {/* <input type="text" placeholder="Calificacion" />
             <br />
             <button onClick={reviewTask}>
               calificar
-            </button>
+            </button> */}
           </div>
 
         }

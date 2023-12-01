@@ -1,11 +1,58 @@
 import { useState } from "react";
 import "./css/completedtaskcard.css";
 import Modal from "./Modal";
+import { supabase } from "../../supabase/supabase";
+import Assignment from "../../classes/assignment";
+import { useNavigate } from "react-router-dom";
 
 function TodoTaskCard({ assignment }) {
+    const navigate = useNavigate();
     const [showModal, setShowModal] = useState(false);
+    const [fileDragged, setFileDragged] = useState(false);
+    const [file, setFile] = useState(null);
+    const handleFileChange = (e) => {
+        const selectedFile = e.target.files[0];
+        setFile(selectedFile);
+    };
     const closeModal = () => {
         setShowModal(false);
+    }
+
+    const handleDragOver = (e) => {
+        e.preventDefault();
+        setFileDragged(true);
+    };
+
+    const handleDragLeave = (e) => {
+        e.preventDefault();
+        setFileDragged(false);
+    };
+
+    const handleDrop = (e) => {
+        e.preventDefault();
+        const selectedFile = e.dataTransfer.files[0];
+        setFile(selectedFile);
+        setFileDragged(false);
+    };
+
+    const handleUploadFile = async () => {
+        try {
+
+            const { data } = await supabase.storage.from('assignments').upload(file.name, file)
+
+            const fileUrl = supabase.storage.from('assignments').getPublicUrl(data.path)
+
+            Assignment.uploadAssignmentFile(fileUrl.data.publicUrl, assignment.assignment_id)
+            setFile(null)
+            closeModal()
+            alert('Archivo subido correctamente')
+            navigate(0)
+
+        } catch (error) {
+            console.log(error);
+            return alert('Ocurrió un error al subir el archivo')
+        }
+
     }
     return (
         <div>
@@ -31,19 +78,29 @@ function TodoTaskCard({ assignment }) {
                 </section>
             </section>
             <Modal show={showModal} onClose={closeModal}>
-                <div>
-                    {/* Aquí puedes mostrar la información del elemento seleccionado */}
+                <div className="modal-content">
                     <h1>{assignment.title}</h1>
                     <h2>{assignment.description}</h2>
                     <h2>Adjuntar Archivo</h2>
-                    <input type="file" />
-                    <br />
+                    <div
+                        className={fileDragged ? "file-drop-area active" : "file-drop-area"}
+                        onDragOver={handleDragOver}
+                        onDragLeave={handleDragLeave}
+                        onDrop={handleDrop}
+                    >
+                        <input
+                            type="file"
+                            onChange={handleFileChange}
+                            className="file-input"
+                        />
+                        <p>Arrastra y suelta archivos aquí o haz clic para seleccionar</p>
+                    </div>
+                    {file && <p>Archivo seleccionado: {file.name}</p>}
                     <h2>Comentarios para el profesor</h2>
                     <textarea cols="80" rows="10"></textarea>
                     <br />
                     <button onClick={closeModal}>Cancelar</button>
-                    <button onClick={closeModal}>Subir</button>
-                    {/* Otros detalles del elemento */}
+                    <button onClick={handleUploadFile}>Subir</button>
                 </div>
             </Modal>
         </div>
