@@ -93,7 +93,7 @@ function TodoTaskCard({ assignment }) {
                             onChange={handleFileChange}
                             className="file-input"
                         />
-                        <p>Arrastra y suelta archivos aquí o haz clic para seleccionar</p>
+                        <p>Arrastra y suelta archivos aquí </p>
                     </div>
                     {file && <p>Archivo seleccionado: {file.name}</p>}
                     <h2>Comentarios para el profesor</h2>

@@ -1,0 +1,40 @@
+/* table.css */
+
+.containermodal {
+    background-color: #2e3136;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.container p {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+}
+
+.container input[type="number"] {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #666;
+    background-color: #121416;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.container button {
+    background-color: #7289da;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 10px;
+}
+
+.container button:hover {
+    background-color: #5f73b7;
+}

@@ -1,4 +1,5 @@
 import "./css/table.css";
+import "./css/tableLegacy.css"
 import Assignment from "../../classes/assignment";
 import { useState } from "react";
 import Modal from "./Modal";
@@ -73,15 +74,16 @@ function Table({ rows }) {
             {
               students.map(student => {
                 return (
-                  <div key={student.expedient} className="container">
+                  <div key={student.expedient} className="containermodal">
                     <p>{student.expedient}</p> 
                     <input value={grade} onChange={e => setGrade(e.target.value)} type="number" placeholder="Calificación" />
                     <br />
+                   
                     <button onClick={reviewTask}>
                       Calificar
                     </button>
                     <a href={assignment.file} target="_blank">
-                      <button>
+                      <button className="containermodal">
                         Ver archivo
                       </button>
                     </a>
