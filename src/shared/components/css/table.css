@@ -1,4 +1,4 @@
-.tareas-container {
+/* .tareas-container {
   width: 100%;
   overflow: auto;
 }
@@ -28,4 +28,79 @@
 
 .tareas-table tr:hover {
   background-color: #ccc;
+} */
+/* table.css */
+
+.tareas-container {
+   width: 100%;
+  overflow: auto;
+  
 }
+
+.tareas-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #252525;
+  color: #fff;
+}
+
+.tareas-table th,
+.tareas-table td {
+  border: 1px solid #444;
+  padding: 10px;
+  text-align: left;
+}
+
+.tareas-table th {
+  background-color: #333;
+}
+
+.tareas-table tbody tr:hover {
+  background-color: #3b3b3b;
+}
+
+.blue-btn {
+  background-color: #7289da;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.blue-btn:hover {
+  background-color: #5f73b7;
+}
+
+
+
+.container p {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #ccc;
+}
+
+.container input[type="number"] {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #666;
+  background-color: #333;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.container button {
+  background-color: #7289da;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.container button:hover {
+  background-color: #5f73b7;
+}
+
