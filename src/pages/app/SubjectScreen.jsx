@@ -6,7 +6,7 @@ import "../../CSS/SubjectButtons.css";
 import CompletedTaskCard from "../../shared/components/CompletedTaskCard";
 import TodoTaskCard from "../../shared/components/TodoTaskCard";
 import Modal from "../../shared/components/Modal";
-import "./CSS/SubjectScreen.css";
+import "./CSS/subjectScreen.css";
 
 const SubjectScreen = () => {
   const user = JSON.parse(localStorage.getItem("user"));
