@@ -65,6 +65,7 @@ function LandingPage() {
           <h2>Se parte de nuestro equipo</h2>
           <br/>
           <p>La Universidad Estatal de Sonora convoca a profesionistas interesados en desarrollar actividades académicas en educación superior, a participar en el concurso de evaluación curricular a realizarse en las cinco Unidades Académicas y la Extensión Miguel Alemán. Consulta las bases descargando la convocatoria de la Unidad Académica de tu interés.</p>
+          <a href="https://www.ues.mx/?p=interna.aspx&cid=15&sid=4&smid=0&latder=0&params=" target="_blank" className="button-info">Ver mas</a>
         </div>
       </div>
       <div class="informacion-2">
@@ -72,8 +73,23 @@ function LandingPage() {
           <h2>Conviértete en Berrendo</h2>
           <br/>
           <p>En esta institución, no solo obtendrán conocimientos, sino que también se convertirán en arquitectos de su propio éxito. Les espera un viaje educativo lleno de desafíos, oportunidades y descubrimientos. ¡Atrévanse a soñar en grande y a ser parte de una comunidad que impulsa el progreso y la innovación! Su camino hacia el futuro comienza aquí. ¡Adelante, aspirantes!</p>
+          <a href="https://aspirantes.ues.mx/" target="_blank" className="button-info">Ver mas</a>
         </div>
         <img src="https://i.ibb.co/M2wvd26/berrendo.jpg" alt="Plantel UES Hermosillo" class="imagen-2"/>
+      </div>
+    </div>
+    <div className="socialMedia">
+      <div>
+        <div>
+            <h5>¿Necesitas ayuda? Contáctanos</h5>
+            <h3>Síguenos en Redes Sociales</h3>
+            <div class="iconos-redes">
+              <a href="https://www.facebook.com/ues.mx/" target="_blank"><img src="https://i.imgur.com/Fp8skn8.jpg" alt="Facebook"/></a>
+              <a href="https://twitter.com/UES_MX/" target="_blank"><img src="https://i.imgur.com/i0qODTT.jpg" alt="Twitter"/></a>
+              <a href="https://www.instagram.com/ues.mx/" target="_blank"><img src="https://i.imgur.com/nuFQYi7.jpg" alt="Instagram"/></a>
+              <a href="https://mx.linkedin.com/school/ues-mx/" target="_blank"><img src="https://i.imgur.com/YzztN0y.jpg" alt="LinkedIn"/></a>
+            </div>
+        </div>
       </div>
     </div>
   </div>

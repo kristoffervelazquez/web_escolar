@@ -125,7 +125,6 @@
   flex: 1;
   max-width: 50%;
   padding: 30px;
-
 }
 
 .informacion-2 {
@@ -143,4 +142,39 @@
   flex: 1;
   max-width: 50%;
   padding: 30px;
+}
+
+.button-info {
+  background-color: #09417e;
+  transition: background-color 0.3s;
+  text-decoration: none;
+  font-weight: bold;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.button-info:hover {
+  background-color: #0056b3;
+}
+
+.socialMedia{
+  text-align: center;
+  margin-top: 10px;
+  padding: 1px;
+  min-height: 4vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.iconos-redes img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
 }
