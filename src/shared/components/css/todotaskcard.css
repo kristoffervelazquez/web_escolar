@@ -46,7 +46,8 @@
 
 .detalles {
     background-color: #4a4a4a;
-    border: #4a4a4a;    
+    border: #4a4a4a; 
+
 }
 
 .detalles:hover {
@@ -68,3 +69,8 @@
     color:#969799;
 }
 
+.modal-content h2 {
+    font-size: 22px;
+    margin-bottom: 8px;
+    text-align: justify;
+}

@@ -12,6 +12,7 @@ function Table({ rows }) {
   const [assignment, setAssignment] = useState(null);
   const [grade, setGrade] = useState(0);
 
+
   const handleClick = async (row) => {
     const task = await Assignment.getAssignmentById(row.assignment_id);
     setAssignment(task);
@@ -51,7 +52,6 @@ function Table({ rows }) {
                   Calificar
                 </button>
               </td>
-             
             </tr>
           ))}
         </tbody>
@@ -77,6 +77,7 @@ function Table({ rows }) {
                     max="10"
                   />
                   <br />
+              
 
                   <button onClick={reviewTask}>Calificar</button>
                   <a href={assignment.file} target="_blank">
